@@ -5,6 +5,7 @@
 
 groupadd computerstream
 
-mkdir /exam/computerstream
+mkdir /exam/computerstream 
 
-chown root:computerstream /exam/computerstream
+chown root:computerstream /exam/computerstream 
+

@@ -5,13 +5,11 @@
 # 	d. Use the latest version of nginx as the base image. 
 
 
-mkdir /data/list
+mkdir /data/list 
 
 yum install docker 
 
-docker container create -v /data/list:/ls:z -p 80:8080 --restart unless-stopped --name docker01 nginx 
-
-docker container start docker01
+docker container create -p 80:8080 -v /data/list:/ls:z --restart unless-stopped --name docker01 nginx 
 
 docker exec -it docker01 /bin/bash
 

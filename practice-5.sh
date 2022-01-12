@@ -6,28 +6,34 @@
 #     c. Extract the contents of the compressed tar file to a new directory named /data/instruction
 #     d. Go back to your home directory, uncompress the manuals.tar.xz file and move it to the /srv directory. 
 
-cd /home 
+cd /home/willis_hertweck/
 
-mkdir manuals
+mkdir manuals 
 
-man -P cat sed >> sed-info
+cd manuals 
+
+man -P cat sed >> sed-info 
 
 man -P cat grep >> grep-info 
 
-tar -cJf manArch.tar.xz sed-info grep-info 
+tar -cvf manuals.tar * 
 
-cd /data 
+xz -z manuals.tar 
 
-mkdir instruction 
+cd /data
+
+mkdir instruction
 
 cd instruction 
 
-cp /home/manuals/manArch.tar.xz . 
+cp /home/willis_hertweck/manuals.tar.xz . 
 
-tar -cJf manArch.tar.xz 
+xz -d manuals.tar.xz 
 
-cd /home/manuals 
+tar -xvf manuals.tar 
 
-xz -v -d manArchive.tar.xz 
+cd /home/willis_hertweck/ 
 
-mv manArch.tar /srv/
+xz -d manuals.tar.xz 
+
+mv manuals.tar /srv 

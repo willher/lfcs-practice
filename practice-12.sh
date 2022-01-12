@@ -2,8 +2,8 @@
 
 docker container list
 
-docker container stop docker01 
+docker container stop docker01
 
 docker container rm docker01 
 
-docker container create -v /data/list:/ls:z -p 80:8080 --restart unless-stopped --name docker02 nginx 
+docker container create -p 80:8080 -v /usr/lib:/ls:z --restart unless-stopped --name docker02 nginx 

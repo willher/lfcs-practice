@@ -9,20 +9,22 @@
 
 groupadd employees
 
-groupadd contractos 
+groupadd contractors
+
+group add administrators
 
 mkdir /srv/admin
 
-groupadd adminitrators 
+chown root:administrators /srv/admin 
 
-chmod 770 /srv/admins
+chmod 770 /srv/admin 
 
-chown root:administrators /srv/admin/
+mkdir /data/list 
 
-mkdir /data/list
+cd /data/list
 
-man -P cat ls >> /data/list/list-info 
+man -P cat ls >> list-info 
 
 visudo 
 
-NOPASSWD:ALL 
+NOPASSWD: ALL 

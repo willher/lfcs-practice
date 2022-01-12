@@ -16,15 +16,27 @@
 
 yum install zsh 
 
-vi /etc/login.defs 
+vi /etc/login.defs
 
-PASS_MAX_DAYS 730 
+PASS_MAX_DAYS   730 
 
-mkdir /etc/skele/welcome-info 
+mkdir /etc/skel/welcome-info 
 
-useradd -c "Full Name: Linux Broman" -s /bin/zsh -G adminitrators linuxbro 
+useradd -c "Linux Broman" -s /bin/zsh -G administrators linuxbro 
 
-passwd --expire linuxbro
+useradd -G contractors jlennon 
+
+useradd -G contractors rstarr
+
+useradd -G employees gharrison 
+
+useradd -G employees rstarr
 
 passwd linuxbro 
+
+>Pa$$w0rd 
+
+passwd --exipre linuxbro 
+
+
 

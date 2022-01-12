@@ -3,20 +3,20 @@
 #     2. The first line of output from the script should consist of the name of the user who invoked it. 
 #     3. The second line of output should contain the IP address of the default gateway. 
 
-vi /home/student/apps/certscript.sh
+vi /home/student/apps/certscript.sh 
 
 #!/bin/bash
 
-name=$(whoami)
-ip_addr=$(ip -r)
+name=$(whiami)
+ip_addr=$(ip route)
 
-echo "$name"
-echo "$ip_addr"
+echo"$name" >> output.txt
+echo"$ip_addr" >> output.txt 
 
-wq!
+:wq! 
 
 chmod 777 /home/student/apps/certscript.sh 
 
-cd /home/student/apps
+cd /home/student/apps/
 
-./certscript.sh 
+./certsript.sh 

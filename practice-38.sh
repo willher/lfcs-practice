@@ -5,13 +5,3 @@
 #     4.Find all files in the directory /srv/SAMPLE002 with a file extension of .tar. 
 #         a. Write a list of matching filenames, one per line, to the file /opt/SAMPLE002/toBeCompressed.txt, which has already been created. 
 #         a. Ensure that you specify a relative path to each file, using /srv/SAMPLE001 as the base directory for the relative path 
-
-find /srv/SAMPLE002 -executable -type f -delete
-
-find /srv/SAMPLE002 -mtime +30 -type f -delete
-
-find /srv/SAMPLE002 -type d -empty -delete 
-
-cd /srv/SAMPLE002 
-
-ls *.tar | sed -e 's/^//srv/SAMPLE001/' > /opt/SAMPLE002/toBeCompressed.txt 

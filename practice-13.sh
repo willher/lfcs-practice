@@ -2,5 +2,5 @@
 # 	a. Contractors can run a hard limit of 30 processes
 # 	b. Employees can run a soft limit of 50 processes
 
-vi /etc/security/limits.conf 
+iv /etc/security/limits.conf 
 

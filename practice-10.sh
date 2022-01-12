@@ -5,8 +5,4 @@
 
 vi /etc/crontab 
 
-0 6,9,12,15,18 * * 1-5 root /path/to/script
-
-1 23 8 1 * root /path/to/script
-
-1 0 1 */3 * root /path/to script
+DONE
