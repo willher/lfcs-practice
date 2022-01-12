@@ -14,29 +14,6 @@
 # 	h. Ensure each user has a folder in their home directory called ‘welcome-info’
 # 	i. Set each account’s password to ‘Pa$$w0rd’ and make them change it on next login
 
-yum install zsh 
-
-vi /etc/login.defs
-
-PASS_MAX_DAYS   730 
-
-mkdir /etc/skel/welcome-info 
-
-useradd -c "Linux Broman" -s /bin/zsh -G administrators linuxbro 
-
-useradd -G contractors jlennon 
-
-useradd -G contractors rstarr
-
-useradd -G employees gharrison 
-
-useradd -G employees rstarr
-
-passwd linuxbro 
-
->Pa$$w0rd 
-
-passwd --exipre linuxbro 
 
 
 

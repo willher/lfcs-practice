@@ -3,6 +3,3 @@
 # 	b. Run the system-info script on January 9th at 11:01pm
 # 	c. Run the system-info script every 3 months at 12:01am
 
-vi /etc/crontab 
-
-DONE

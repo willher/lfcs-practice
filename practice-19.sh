@@ -4,24 +4,3 @@
 #     3.Replace every occurrence of the word Earth shown with an uppercase E, with the word Globe. 
 #     4.Add a new line at the very end of the document that contains Auctores Varii. 
 
-vi /home/student/textreferences.editme.txt 
-
-:set number
-
-:7777
-
-yy
-
-g 
-
-o 
-
-pp 
-
-:%s/Earth/Glove/g 
-
-G 
-
-O 
-
-Auctores Varii 
