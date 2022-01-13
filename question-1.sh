@@ -7,6 +7,26 @@
 # 		iii. Give it a label ‘lv01’
 # 		iv. Mount it persistently to /mnt 
 
-fdisk /dev/sbd
+lsblk -af 
 
-#***QUESTION: Cannot open file or dir, do we need to attach the 10gb disk before we do this OR look for an avalible disk??***
+#lists avalible disks / partitions
+
+fdisk /dev/sdb 
+
+fdisk /dev/sdb
+
+vgcreate vg01 /dev/sbd1 /dev/sbd2
+
+lvcreate -L +2G -n lv01 vg01 
+
+cd /dev/vg01 
+
+mkfs.ext3 -L lv01 lv01 
+
+vi /etc/fstab 
+
+LABEL=lv01 /mnt ext3 defaults 0 0 
+
+wq!
+
+mount -L lv01 /mnt 

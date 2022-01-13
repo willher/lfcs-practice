@@ -8,6 +8,6 @@ nmcli
 
 #gathers information about ehternet connections
 
-systemctl restart network
+systemctl restart NetworkManager
 
 #***QUESTION: network.service not found?***

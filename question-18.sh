@@ -16,7 +16,7 @@ firewall-cmd --add-port=9999/tcp --permanent
 
 firewall-cmd --reload
 
-systemctl start ssh
+systemctl start sshd
 
 ssh localhost -p 9999
 

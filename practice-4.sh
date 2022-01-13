@@ -2,3 +2,4 @@
 # 	a. Stop the VM
 # 	b. Start the VM
 # 	c. Apply automatic stat configuration for the VM
+

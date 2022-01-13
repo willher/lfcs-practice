@@ -6,7 +6,7 @@ ssh user@LFCS-2
 
 #the question wants you to setup the webserver to run on LFCS-2 so you have to ssh to the server first
 
-yum install hpptd
+yum install httpd
 
 #this installs teh httpd module you need for a basic webserver
 

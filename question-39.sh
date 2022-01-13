@@ -1,0 +1,1 @@
+#upon booting, set machine to permanently boot into runlevel 3

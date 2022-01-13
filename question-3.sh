@@ -16,6 +16,6 @@ wget http://mirror.compevo.com/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-Minim
 
 #wget to pull the iso from a link 
 
-virt-install --name=ExVm01 --ram=512 --vcpu=1 --location/tmp/CentOS-7-x86_64-Minimal-2009.iso --os-type=linux --os-variant=rhel7 --network type=direct,source=eth0 --disk path=/var/lib/libvirt/images/centos7vm.dsk,size=8 --nographics --extra-args console=ttySO
+virt-install --name=ExVm01 --ram=512 --vcpu=1 --location=/tmp/CentOS-7-x86_64-Minimal-2009.iso --os-type=linux --os-variant=rhel7 --network type=direct,source=eth0 --disk path=/var/lib/libvirt/images/centos7vm.dsk,size=8 --nographics --extra-args console=ttySO
 
 #this command will install a VM with the requirements from the question

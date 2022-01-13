@@ -6,3 +6,4 @@
 # 		ii. Format it with the ext3 file system
 # 		iii. Give it a label ‘lv01’
 # 		iv. Mount it persistently to /mnt 
+
