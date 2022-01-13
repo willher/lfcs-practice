@@ -3,3 +3,4 @@
 # 	b. Add a spare disk of 1GB
 # 	c. Mount to /raid
 # 	d. Save the configuration
+

@@ -14,6 +14,3 @@
 # 	h. Ensure each user has a folder in their home directory called ‘welcome-info’
 # 	i. Set each account’s password to ‘Pa$$w0rd’ and make them change it on next login
 
-
-
-

@@ -3,5 +3,3 @@
 #     2.Create a computestream folder in /exam/. 
 #     3.Make the computestream group the owner of the /exam/computestream folder. 
 
-
-

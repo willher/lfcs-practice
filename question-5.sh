@@ -30,7 +30,7 @@ vim sed-info
 
 #sanity check we have info in the file
 
-tar -cJf manArch.tar.xz sed-info grep-info
+tar -cJf manArch.tar.xz *
 
 #this will compress and archive the contents of both files
 
@@ -38,7 +38,7 @@ cp manArch.tar.xz /data/instructions
 
 cd /data/instructions
 
-tar -xf manArchive.xz --wildcards '*-info' 
+tar -xJf manArchive.xz 
 
 ll -ltr
 

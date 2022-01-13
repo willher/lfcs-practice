@@ -4,3 +4,4 @@
 #     3.Compress the tar archive file /opt/SAMPLE0001.tar using the bzip2 compression algorithm 
 #     4.Compress the tar archive file /opt/SAMPLE0001.tar using the xz compression algorithm 
 #         a. Make sure that the uncompressed archive file /opt/SAMPLE0001.tar is not removed after creating the compressed versions of the archive file! 
+
