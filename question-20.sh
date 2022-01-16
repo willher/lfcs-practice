@@ -8,7 +8,7 @@ vi /home/student/apps/certscript.sh
 #!/bin/bash
 
 name=$(whoami)
-ip_addr=$(ip -r)
+ip_addr=$(ip route)
 
 echo "$name"
 echo "$ip_addr"

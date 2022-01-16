@@ -7,3 +7,18 @@
 # 		iii. Give it a label ‘lv01’
 # 		iv. Mount it persistently to /mnt 
 
+lsblk 
+
+fdisk /dev/sda 
+
+fdisk /dev/sda 
+
+vgcreate vg01 /dev/sda1 /dev/sda2 
+
+lvcreate -L +2G vg01 lv01 
+
+mkfs.ext3 -L lv01 lv01 
+
+vi /etc/fstab 
+
+LABEL=lv01 /dev/lv01 ext3 defaults 0 0 

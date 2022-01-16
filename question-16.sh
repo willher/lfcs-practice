@@ -56,15 +56,9 @@ yum install mdadm
 
 #this is the utility used to make the RAID
 
-mdadm --create /dev/md0 --level=mirror --raid-devices=2 /dev/sdb3 /dev/sdc1
+mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sdb1 /dev/sdb2
 
-#***QUESTION: why is it /dev/sdb3 and /dev/sdc1?***
-
-cat /proc/mdstat
-
-mdadm -E /dev/sdb3 /dev/sdc1 
-
-mdadm --detail /dev/md0 
+#
 
 mkfs.ext4 /dev/dm0
 

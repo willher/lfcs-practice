@@ -10,66 +10,38 @@ yum install httpd
 
 #this installs teh httpd module you need for a basic webserver
 
-firewall-cmd --permanent --add-service=http
+systemctl status httpd 
 
-#add a firewall rule to permanently allow http traffic
+systemctl enable httpd
 
-firewall-cmd --reload
+systemctl start httpd 
 
-#reloads the firewall to make sure it uses the new rule
+#enables and starts the httpd service
 
-chmod -R 755 /var/www
+vi /var/www/index.html 
 
-#change perms of www directory recursively
+<HTML>
+<BODY>
+<P>Hello Wolrd</P>
+</BODY>
+</HTML>
 
-vim /var/www/lfctest/html/index.html 
+:wq!
 
-<p>Hello World</p>
+#creates a basic hello world page
 
-#this creates the hello world index.html file to say 'Hello World'.  ***QUESTION: Did we need to create the directory first?***
+firewall-cmd --perminate --add-serivce=http 
 
-vim /etc/httpd/conf/httpd.conf 
+firewall-cmd --reload 
 
-##QUESTION: are you commenting out the conf.d/*.conf and adding our customer directories
+#allows traffic via http to the webserver
 
-sudo mkdir /etc/httpd/sites-avalible /etc/httpd/sites-enabled 
+vi /etc/hosts 
 
-#make the directories we need for sites-avalbile and sites-enabled 
+lfctst.com 
 
-vim /etc/httpd/sites-avalible/lfctest-02.conf
+#updates the /etc/hosts file to resolve to the FQDN lfctst.com
 
-#make oour config file
+systemctl restart httpd 
 
-<VirtualHost *:80>
-ServerName www.lfcstest
-ServerAlias lfcstest
-DocumentRoot /var/www/lfcstest/html
-ErrorLog /var/www/lfcstest/log/error.log
-CustomLog /var/www/lfcstest/log/requests.log combined
-</VirtualHost>
-
-#contents of the config file to serve lfcstest
-
-ln -s /etc/httpd/sites-avalible/lfctest.conf /etc/httpd/sites-enabled/lfctest.conf
-
-#create a sym link of our config for sites-enabled and sites-avalbile 
-
-sudo setsbool -P httpd_unified_1
-
-#***QUESTION: ????***
-
-sudo ls -dZ /var/www/your_domain/log/
-
-sudo semanage fcontext -a -t httpd_log_t "/var/www/your_domain/log(/.*)?"
-
-sudo restorecon -R -v /var/www/your_domain/log
-
-sudo ls -dZ /var/www/your_domain/log/
-
-systemctl restart httpd
-
-#restarts the httpd service
-
-systemctl enable httpd 
-
-#enabled httpd
+#ensures we have the latest configuration loaded by httpd

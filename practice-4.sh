@@ -3,3 +3,8 @@
 # 	b. Start the VM
 # 	c. Apply automatic stat configuration for the VM
 
+virsh shutdown ExVM01 
+
+virsh start ExVM01 
+
+virsh autostart ExVM01 

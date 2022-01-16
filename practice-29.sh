@@ -4,3 +4,14 @@
 #     ●sysadmin has sudo privileges and will not be prompted for a password when using the sudo command. 
 #     ●The default shell for this user is zsh. 
 
+useradd -d /sysadmin/ -s /bin/zsh sysadmin
+
+yum install zsh 
+
+passwd sysadmin
+
+>science
+
+>science 
+
+visudo 

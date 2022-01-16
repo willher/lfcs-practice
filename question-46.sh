@@ -4,3 +4,35 @@
 #   c. Find line 3123 and put it at the bottom of the document.
 #   d. Find line 2134 and put it at the top of the document.
 #   e. Find line 2351 and put it at line 1532.
+
+wget URL
+
+vi pg844.txt 
+
+:%s/Ernest/Earnest/g 
+
+:3123
+
+dd 
+
+G 
+
+p
+
+:2134
+
+dd
+
+:1 
+
+P 
+
+:2351
+
+dd
+
+:1531
+
+P
+
+:wq!

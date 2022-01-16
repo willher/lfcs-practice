@@ -4,4 +4,14 @@
 #   c. Configure the container restart policy such that it will always start unless the container is manually stopped. 
 # 	d. Use the latest version of nginx as the base image. 
 
+yum install docker
 
+mkdir /data/list 
+
+docker container create --name docker01 -p 80:8080 -v /data/list:/ls:z --restart unless-stopped nginx 
+
+docker container start docker01 
+
+docker exec -it docker01 
+
+ls 

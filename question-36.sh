@@ -4,4 +4,4 @@ lsblk -f
 
 vi /etc/fstab 
 
-UUID=<output from lsblk -f> /boot ext4 default,ro 0 0 
+UUID=<output from lsblk -f> /mount/point ext4 default,ro 0 0 

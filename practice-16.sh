@@ -4,3 +4,8 @@
 # 	c. Mount to /raid
 # 	d. Save the configuration
 
+lsblk 
+
+yum install mdadm 
+
+fdisk /

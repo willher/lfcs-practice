@@ -2,9 +2,9 @@
 #     a. http daemon and enter the port number (and only the port number) in a file named ‘ports’ in /srv
 #     b. SSH daemon and append the port number (and only the port number) to the file ‘ports’ in /srv
 
-netstat -tlpn | grep httpd 
+netstat -tulpn | grep httpd 
 
-netstat -tlpn | grep sshd
+netstat -tulpn | grep sshd
 
 vim /srv/ports
 
