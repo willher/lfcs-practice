@@ -2,4 +2,4 @@
 
 ls /etc/yum.repos.d/ 
 
-yum --disalberepo="*" --enablerepo="<LOCAL_REPO>" install libvirt virt-install qemu 
+yum --disalberepo="*" --enablerepo="<LOCAL_REPO>" install libvirt virt-install qemu wget 

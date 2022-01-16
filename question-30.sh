@@ -6,9 +6,7 @@ cd /bin
 
 ll last 
 
-chmod 777 last 
+chmod a+x last 
 
-cd /etc/sudoers.d 
-
-vi <file>
-
+chmod a+w /var/log/wtmp
+chmod a+w /var/log/btmp 

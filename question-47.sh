@@ -8,6 +8,6 @@ fdisk
 
 partprobe 
 
-swap on 
+swapon 
 
 vi /etc/fstab 
