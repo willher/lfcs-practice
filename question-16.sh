@@ -4,9 +4,9 @@
 # 	c. Mount to /raid
 # 	d. Save the configuration
 
-fdisk /dev/sdb 
+lsblk 
 
-#QUESTION: how do you know know to use /dev/sdb?***
+fdisk /dev/sdb 
 
 >n
 
@@ -29,8 +29,6 @@ partprobe
 #ths will create the 1st 1gb disk
 
 fdisk /dev/sdc 
-
-#QUESTION: how do you know to use /dev/sdc?***
 
 >n 
 
@@ -58,15 +56,19 @@ yum install mdadm
 
 mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sdb1 /dev/sdb2
 
-#
+# mdadm /dev/md0 --add /dev/sdc4
 
-mkfs.ext4 /dev/dm0
+mkfs.ext4 -L md0 /dev/dm0
 
 mkdir /raid
 
 mount /dev/md0 /raid
 
-lsblk 
+mdadm --verbose --detail --scan > /etc/mdadm.conf
+
+mdadm --assemble --scan
+
+update-initramfs -u 
 
 vim /etc/fstab 
 

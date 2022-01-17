@@ -2,31 +2,32 @@
 	# a. Create the website lfctst.com
 	# b. Ensure a client connecting to lfctst.com sees a message “Hello World”
 
-yum install httpd 
-
-systemctl status httpd 
+yum install httpd lynx 
 
 systemctl enable httpd
 
 systemctl start httpd 
 
-vi /var/www/index.html 
-
-<HTML>
-<BODY>
-<P>Hello Wolrd</P>
-</BODY>
-</HTML>
-
-:wq!
-
-firewall-cmd --perminate --add-serivce=http 
+firewall-cmd --perminate --add-service=http 
 
 firewall-cmd --reload 
 
-vi /etc/hosts 
+vi /var/www/html/index.html 
 
-lfctst.com 
+<HTML>
+<BODY>
+<P>Hello World</P>
+</BODY>
+</HTML>
+
+wq!
+
+ip a 
+
+vi /etc/hosts
+
+wq!
 
 systemctl restart httpd 
 
+apachectl restart 

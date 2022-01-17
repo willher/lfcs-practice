@@ -3,9 +3,16 @@
 #     2. Find all of the ports used for TCP services IMAP3 and IMAPS, again as documented in /etc/services
 #     3. Write those port numbers to the file /home/student/imap-ports.txt. 
 
-netstat -tulpn 
+vi /etc/services
 
-vi /home/student/port-2605.txt 
+/2605
 
-<NAME FROM NESTAT>
+echo "service-name" >> /home/student/port-2605.txt 
 
+cat /etc/services | grep IMAP3
+
+echo "port" >> /home/student/imap-port.txt
+
+cat /etc/services | grep IMAP5
+
+echo "port" >> /home/student/imap-ports.txt 

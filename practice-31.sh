@@ -8,3 +8,4 @@ passwd projectadmin
 >_onetime43_
 
 usermod -d /home/projectadmin projectadmin 
+

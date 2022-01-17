@@ -9,16 +9,36 @@
 
 lsblk 
 
-fdisk /dev/sda 
+fdisk /dev/sdb 
 
-fdisk /dev/sda 
+t 
 
-vgcreate vg01 /dev/sda1 /dev/sda2 
+31, Linux LVM
 
-lvcreate -L +2G vg01 lv01 
+partprobe 
+
+fdisk /dev/sdb 
+
+t
+
+31, Linux LVM
+
+w 
+
+pvcreate /dev/sdb1 
+
+pvcreate /dev/sdb2 
+
+vgcreate vg01 /dev/sdb1 /dev/sdb2 
+
+lvcreate -L +2G -n lv01 
 
 mkfs.ext3 -L lv01 lv01 
 
+mount -L lv01 /mnt 
+
 vi /etc/fstab 
 
-LABEL=lv01 /dev/lv01 ext3 defaults 0 0 
+/dev/vg01/lv01 /mnt ext3 defaults 0 1 
+
+wq! 

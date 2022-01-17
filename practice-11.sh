@@ -6,12 +6,6 @@
 
 yum install docker
 
-mkdir /data/list 
+mkdir /data/list
 
-docker container create --name docker01 -p 80:8080 -v /data/list:/ls:z --restart unless-stopped nginx 
-
-docker container start docker01 
-
-docker exec -it docker01 
-
-ls 
+docker container create --name docker01 -v /data/list:/ls:z -p 80:8080 --restart unless-stopped nginx 

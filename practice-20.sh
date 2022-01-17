@@ -5,10 +5,14 @@
 
 vi /home/student/apps/certscript.sh 
 
-whoami=$(whoami)
-ip=$(ip route)
+#!/bin/bash 
 
-echo"$whoami"
-echo"$ip"
+name=$(whoami)
+gateway=$(ip route)
 
-:wq! 
+echo"$name"
+echo"$gateway"
+
+wq! 
+
+chmod 777 certscript.sh 

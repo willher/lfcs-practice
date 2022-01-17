@@ -27,7 +27,7 @@ virt-install --name=ExVm01 --ram=512 --vcpu=1 --location=/tmp/CentOS-7-x86_64-Mi
 
 --------------------------------------------------------------------------
 
-yum install libvirt virt-install wget 
+yum install libvirt libvirt-bin virt-install virt-manager qemu qemu-kvm wget
 
 systemctl enable libvirtd 
 
@@ -35,4 +35,4 @@ systemctl start libvirtd
 
 virsh list --all
 
-virt-install --name=ExVm01 --ram=512 --vcpu=1 --os-type=linux --os-variant=centos-stream9 
+virt-install --name=ExVm01 --ram=512 --vcpu=1 --disk size=5 --os-type=linux --os-variant=centos-stream9 --import

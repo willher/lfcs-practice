@@ -6,8 +6,6 @@ port 9999
 
 wq! 
 
-#***QUESTION: where in the file is this?  Port 22 as an example?***
-
 semanage port -m -t ssh_port_t =p tcp 9999
 
 #use -m because the ssh_port_t is already defined as a port object type.  If it is not, use -a to add it instead.
@@ -16,7 +14,7 @@ firewall-cmd --add-port=9999/tcp --permanent
 
 firewall-cmd --reload
 
-systemctl start sshd
+systemctl restart sshd
 
 ssh localhost -p 9999
 

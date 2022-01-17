@@ -8,22 +8,23 @@ vi /home/student/textreferences/editme.txt
 
 :7777
 
-dd 
+dd
 
-:1 
+:1
 
 P 
 
-:7000 
+:7000
 
 dd
 
-%s/Earth/Globe/g 
+:%s/Earth/Globe/g 
 
-G 
+G
 
 o 
 
 Auctores Varii 
 
-:wq! 
+wq!
+

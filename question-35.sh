@@ -2,11 +2,16 @@
 
 lsblk 
 
-mkswap /dev/sdb OR fdisk /dev/sdb 
+fdisk /dev/sdb 
 
-swapon /dev/sdb3 
+mkswap /dev/sdb1
+
+swapon /dev/sdb1
 
 vi /etc/fstab 
 
-swapon -s 
+/dev/sdb1 none swap defaults 0 0 
 
+#Remove this line 
+
+swapon /dev/sdb1 

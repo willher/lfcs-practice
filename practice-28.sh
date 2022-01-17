@@ -5,20 +5,22 @@
 #     ●This new user is a member of the existing students group. 
 #     ●The /home/school/harry/binaries/ directory is part of the PATH variable. 
 
-useradd harry 
+useradd -d /home/school/harry -G students harry
 
-passwd harry
-
->magic
+passwd harry 
 
 >magic
 
-usermod -d /home/school/harry/ harry
+>magic 
 
-usermod -G students harry 
+cd /home/school/harry 
 
-vi /home/school/harry/.bash_profile
+ll -latr 
 
-PATH=$PATH:$HOME/binaries 
+vi .bashrc 
 
-mkdir /home/school/harry/binaries 
+G 
+
+PATH=$PATH:$HOME/binaries/ 
+
+source .bashrc 

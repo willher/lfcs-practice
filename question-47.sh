@@ -1,13 +1,17 @@
-#create a 1GB SWAP partition and add it to the exiting SWAP pool. Ensure it is mounted at boot. 
+#create a 1GB SWAP file and add it to the exiting SWAP pool. Ensure it is mounted at boot. 
 
 lsblk 
 
-fdisk 
+dd if=/dev/zero of=/root/extra.swp bs=1M count=102
 
-+1G
+mkswap /root/extra.swp 
 
-partprobe 
+chmod 600 /root/extra.swp 
 
-swapon 
+swapoff /root/extra.swp 
 
 vi /etc/fstab 
+
+/root/extra.swp none swap defaults 0 0 
+
+swapon /root/extra.swp 

@@ -15,9 +15,23 @@ fdisk /dev/sdb
 
 fdisk /dev/sdb
 
+yum instll lvm2 
+
+pvcreate /dev/sdb1 /dev/sdb2 
+
 vgcreate vg01 /dev/sbd1 /dev/sbd2
 
-lvcreate -L +2G -n lv01 vg01 
+# vgextend vg01 /dev/sdc3 
+
+# vgdisplay 
+
+lvcreate -L +2G -n lv01 vg01
+
+# lvextend -l 348 /dev/vg01/lv01 
+
+# resize2fs /dev/vg01/lv01 
+
+# lvdiplay 
 
 cd /dev/vg01 
 

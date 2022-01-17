@@ -2,10 +2,16 @@
 
 useradd canidate 
 
-passwd canidate
+passwd canidate 
 
 >cert456
 
 >cert456 
 
 visudo 
+
+/wheel
+
+canidate ALL=(ALL) NOPASSWD: ALL 
+
+wq! 

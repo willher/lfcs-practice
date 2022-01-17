@@ -5,8 +5,10 @@
 
 vi /etc/crontab 
 
-0 6,9,12,15,18 * * 1-5 root /srv/system/system-info
+0 6,9,12,15,18 * * 1-5 root /srv/system/system-info 
 
-1 23 1 9 * root /srv/system/system-info
+1 23 9 1 * root /srv/system/system-info 
 
 1 0 * */3 * root /srv/system/system-info 
+
+wq! 

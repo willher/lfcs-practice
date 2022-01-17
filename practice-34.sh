@@ -5,10 +5,16 @@
 
 mount /dev/xvdf2 /mnt/backup/ 
 
-yum install bzip2 
+cd /mnt/backup/ 
+
+ls
+
+cp backup-primary.tar.bz2 /opt
 
 cd /opt
 
-cp /mnt/backup/backup-primary.tar.bz2 . 
+yum install bzip2
 
-bzip2 -d /mnt/backup/backup-primary.tar.bz2
+bzip2 -d backup-primary.tar.bz2
+
+tar -xvf backup-primary.tar 

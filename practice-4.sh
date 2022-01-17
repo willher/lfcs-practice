@@ -5,6 +5,6 @@
 
 virsh shutdown ExVM01 
 
-virsh start ExVM01 
+virsh start ExVm01 
 
-virsh autostart ExVM01 
+virsh autostart ExVm01 

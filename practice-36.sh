@@ -1,7 +1,9 @@
 # Configure the system so that the existing filesystem that corresponds to /staging gets persistently mounted in read-only mode.
 
-lsblk -af
+lsblk -af 
 
-vi /etc/fstab
+df -h 
 
-UUID= /boot/ ext4 defaults,ro 0 0 
+vi /etc/fstab 
+
+/dev/sdb1 /staging ext3 defaults,ro 0 1 

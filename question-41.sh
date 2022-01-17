@@ -14,17 +14,18 @@ cp /etc/sysconfig/network-script/<EHTERNET> /etc/sysconfig/network-script/<ETHER
 
 vi /etc/sysconfig/network-scripts/<EHTERNET>
 
-BOOTPROTO = "none"
+BOOTPROTO =none
 
 #change to none
 
-IPADDR="192.168.10.10"
-NETMASK="255.255.255.0"
-GATEWAY="192.168.10.1"
-BROADCAST="192.168.10.255"
-DNS1="192.168.10.3"
-DNS2="8.8.8.8"
+IPADDR=192.168.10.10
+PREFIX=24
+GATEWAY=192.168.10.1
+DNS1=8.8.4.4
+DNS2=8.8.8.8
 
 wq!
 
 vi /etc/hosts
+
+systemctl restart NetworkManager.service

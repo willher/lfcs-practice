@@ -3,8 +3,10 @@
 #     2.Create a computestream folder in /exam/. 
 #     3.Make the computestream group the owner of the /exam/computestream folder. 
 
-groupadd computerstream 
+groupadd computerstream
 
 mkdir /exam/computerstream
 
-chown root:computerstream /exam/computerstream
+chown root:computerstream /exam/computerstream 
+
+chmod 770 /exam/computerstream 

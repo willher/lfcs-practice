@@ -15,12 +15,16 @@ groupadd administrators
 
 mkdir /srv/admin
 
-chown root:administrators /srv/admins; chmod 770 /srv/admins
+chown root:administrators /srv/admin
+
+chmod 770 /srv/admin 
 
 mkdir /data/list 
 
-man -P cat ls >> /data/list/list-info
+man -P cat ls >> list-info 
 
 visudo 
 
-NOPASSWD: ALL
+administrators ALL=(ALL) NOPASSWD: ALL
+
+wq!

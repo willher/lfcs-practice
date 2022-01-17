@@ -6,6 +6,40 @@
 
 lsblk 
 
+fdisk /dev/sdb
+
+29; Linux raid
+
+w
+
+fdisk /dev/sdc 
+
+29; Linux raid
+
+w 
+
+fdisk /dev/sde 
+
+29; Linux raid
+
+w
+
 yum install mdadm 
 
-fdisk /
+mdadm --create /dev/md0 --level=1 --raid-devices=3 /dev/sdb1 /dev/sdc1 --spare-devices=1 /dev/sde 
+
+mkfs.ext4 -L md0 /dev/md0
+
+mount /dev/md0 /raid 
+
+vi /etc/fstab 
+
+/dev/mdo /raid ext4 defaults 0 0 
+
+wq!
+
+# mdadm --verbose --detail --scan > /etc/mdadm.conf 
+
+# mdadm --assemble --scan 
+
+# update-initramfs -u 
