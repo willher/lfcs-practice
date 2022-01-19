@@ -16,7 +16,7 @@
 
 yum instll zsh 
 
-useradd -c "Linux Broman" -s /bin/zsh -G administrators linuxbro 
+useradd -c "Linux Broman" -s /bin/zsh -g administrators linuxbro 
 
 useradd -G contractors jlennon
 

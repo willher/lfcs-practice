@@ -11,7 +11,7 @@ t
 
 29 - Linux raid
 
-fdisk /dev/sda 
+fdisk /dev/sdb 
 
 t 
 
@@ -29,8 +29,8 @@ vi /etc/fstab
 
 /dev/md0 /storage ext4 defaults 0 0 
 
-mdadm --verbose --detail --scan > /etc/mdadm.conf 
+# mdadm --verbose --detail --scan > /etc/mdadm.conf 
 
-mdadm --assemble --scan 
+# mdadm --assemble --scan 
 
-update-initramfs -u 
+# update-initramfs -u 

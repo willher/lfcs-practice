@@ -4,6 +4,6 @@ yum install docker
 
 docker container stop docker01 
 
-docker container delete docker01 
+docker container rm docker01 
 
 docker container create --name docker02 --restart unless-stopped -v /data/list:/ls:z -p 80:8080 nginx 

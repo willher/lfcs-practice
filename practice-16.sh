@@ -26,7 +26,9 @@ w
 
 yum install mdadm 
 
-mdadm --create /dev/md0 --level=1 --raid-devices=3 /dev/sdb1 /dev/sdc1 --spare-devices=1 /dev/sde 
+mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sdb1 /dev/sdc1 
+
+mdadm --add-spare /dev/md0 /dev/sde1
 
 mkfs.ext4 -L md0 /dev/md0
 

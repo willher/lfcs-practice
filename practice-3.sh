@@ -14,6 +14,6 @@ virt-install --name=ExVm01 --vcpu=1 --ram=512 --disk size=5 --os-type=linux --os
 
 OR
 
-virt-install --name=EXVM01 --vcpu=1 --ram=512 --disk size=5 --os-type=linux --os-varient=centos-stream9 --cdrom=OS_IMAGE_iso 
+virt-install --name=EXVM01 --vcpu=1 --ram=512 --disk size=5 --os-type=linux --os-varient=centos-stream9 --cdrom=/tmp/OS_IMAGE_iso 
 
 virsh start ExVm01 

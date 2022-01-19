@@ -31,11 +31,11 @@ pvcreate /dev/sdb2
 
 vgcreate vg01 /dev/sdb1 /dev/sdb2 
 
-lvcreate -L +2G -n lv01 
+lvcreate -L +2G -n lv01 vg01 
 
 mkfs.ext3 -L lv01 lv01 
 
-mount -L lv01 /mnt 
+mount -L /sdb/vg01/lv01 /mnt 
 
 vi /etc/fstab 
 

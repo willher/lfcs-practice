@@ -2,7 +2,9 @@
 
 lsblk 
 
-dd if=/dev/zero of=/root/sample.swp bs=1M count=102
+yum install util-linux
+
+fallocate -l 1G /root/sample.swp 
 
 mkswap /root/sample.swp 
 
