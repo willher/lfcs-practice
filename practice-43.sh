@@ -29,8 +29,3 @@ vi /etc/fstab
 
 /dev/md0 /storage ext4 defaults 0 0 
 
-# mdadm --verbose --detail --scan > /etc/mdadm.conf 
-
-# mdadm --assemble --scan 
-
-# update-initramfs -u 

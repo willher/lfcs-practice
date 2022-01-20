@@ -39,9 +39,3 @@ vi /etc/fstab
 /dev/mdo /raid ext4 defaults 0 0 
 
 wq!
-
-# mdadm --verbose --detail --scan > /etc/mdadm.conf 
-
-# mdadm --assemble --scan 
-
-# update-initramfs -u 

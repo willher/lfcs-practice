@@ -7,4 +7,3 @@ chmod 777 /usr/bin/last
 man last 
 
 chmod 777 /var/log/wtmp /var/log/btmp 
-
